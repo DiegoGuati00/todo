@@ -5,12 +5,12 @@ const { sequelize } = require('./utils/db');
 const { toDo } = require('./models/todo.model');
 
 //routes
-const { toDoRoute } = require('./routes/toDo.route')
+const { toDoRouter } = require('./routes/toDo.route')
 
 const app = express();
 app.use(express.json());
 
-app.use('/', toDoRoute);
+app.use('/', toDoRouter);
 
 sequelize
     .authenticate()
